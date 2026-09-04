@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="시장과 관심사를 조합해 실행 가능한 사업 아이디어를 발견하세요." />
+  <title>IDEA SPRING — 사업 아이디어 발견 플랫폼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#" aria-label="IDEA SPRING 홈"><span>IDEA</span><i></i><span>SPRING</span></a>
+    <nav aria-label="주요 메뉴">
+      <a href="#explore">아이디어 탐색</a><a href="#how">이용 방법</a><a href="#saved">저장한 아이디어</a>
+    </nav>
+    <button class="nav-cta" data-scroll="explore">무료로 시작하기 <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> NEXT BUSINESS STARTS HERE</div>
+        <h1>막연한 생각을<br><em>될 만한 사업</em>으로.</h1>
+        <p>당신의 관심사와 시장의 기회를 연결해<br>오늘 바로 검증할 수 있는 사업 아이디어를 찾아드립니다.</p>
+        <div class="hero-actions">
+          <button class="primary" data-scroll="explore">아이디어 발견하기 <span>→</span></button>
+          <button class="text-btn" data-scroll="how"><span class="play">▶</span> 어떻게 작동하나요?</button>
+        </div>
+        <div class="proof"><div class="avatars"><span>준</span><span>민</span><span>서</span><span>혁</span></div><b>2,400+</b><small>명의 예비 창업가가<br>아이디어를 찾았어요</small></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sun"></div><div class="orbit one"></div><div class="orbit two"></div>
+        <div class="idea-card c1"><small>RECOMMENDED</small><b>반려동물 맞춤<br>건강 구독 서비스</b><span>시장 매력도 <strong>92</strong></span></div>
+        <div class="idea-card c2"><small>GROWING MARKET</small><b>시니어를 위한<br>AI 디지털 코치</b><span>연평균 성장률 <strong>18%</strong></span></div>
+        <div class="idea-card c3"><small>QUICK START</small><b>동네 사장님<br>숏폼 제작 대행</b><span>초기 비용 <strong>낮음</strong></span></div>
+        <div class="spark">✦</div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="아이디어 카테고리"><div>AI & AUTOMATION <i>✦</i> LOCAL BUSINESS <i>✦</i> CREATOR ECONOMY <i>✦</i> WELLNESS <i>✦</i> SUSTAINABILITY <i>✦</i> AI & AUTOMATION</div></section>
+
+    <section id="explore" class="explore shell">
+      <div class="section-head"><div><span class="section-no">01</span><h2>당신에게 맞는<br>기회를 찾아보세요.</h2></div><p>관심 분야와 투자 여력을 선택하면<br>아이디어를 새롭게 추천해 드려요.</p></div>
+      <div class="filters">
+        <div class="filter-group"><label>관심 분야</label><div id="categoryFilters" class="chips"></div></div>
+        <div class="filter-group"><label>시작 예산</label><div id="budgetFilters" class="chips"></div></div>
+        <button id="refreshBtn" class="refresh"><span>↻</span> 새로운 조합 보기</button>
+      </div>
+      <div id="ideaGrid" class="idea-grid" aria-live="polite"></div>
+      <p id="resultCount" class="result-count"></p>
+    </section>
+
+    <section id="how" class="how">
+      <div class="shell"><div class="section-head light"><div><span class="section-no">02</span><h2>생각에서 실행까지,<br>세 단계면 충분해요.</h2></div><p>좋은 아이디어는 떠오르는 것이 아니라<br>발견하고, 질문하고, 검증하는 것입니다.</p></div>
+      <div class="steps">
+        <article><span>01</span><div class="step-icon">⌁</div><h3>관심사를 선택하세요</h3><p>내가 잘하고 좋아하는 분야에서<br>가능성 높은 기회를 좁혀요.</p></article>
+        <article><span>02</span><div class="step-icon">✦</div><h3>아이디어를 발견하세요</h3><p>시장성·실행 난이도·트렌드를 바탕으로<br>나에게 맞는 아이디어를 추천해요.</p></article>
+        <article><span>03</span><div class="step-icon">↗</div><h3>한 단계 더 구체화하세요</h3><p>타깃 고객과 첫 실행 계획까지<br>아이디어를 사업의 언어로 바꿔요.</p></article>
+      </div></div>
+    </section>
+
+    <section id="saved" class="saved shell">
+      <div><span class="section-no">03</span><h2>마음에 든 아이디어를<br>놓치지 마세요.</h2><p>저장한 아이디어는 이 브라우저에 안전하게 남습니다.</p></div>
+      <div id="savedList" class="saved-list"><p>아직 저장한 아이디어가 없어요.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><a class="brand inverse" href="#"><span>IDEA</span><i></i><span>SPRING</span></a><p>당신의 다음 사업이 시작되는 곳.</p><small>© 2026 IDEA SPRING. All rights reserved.</small></div></footer>
+
+  <nav class="mobile-nav" aria-label="모바일 메뉴"><a href="#" class="active"><span>⌂</span>홈</a><a href="#explore"><span>✦</span>탐색</a><a href="#saved"><span>♡</span>저장</a></nav>
+  <dialog id="detailDialog"><button class="dialog-close" aria-label="닫기">×</button><div id="dialogContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

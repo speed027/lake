@@ -1,0 +1,13 @@
+# Codex temporary artifacts
+.chart-data-*/
+.codex-build/
+.codex-finalizer/
+.codex-render/
+.codex-render2/
+
+# Generated documents not used by the website
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
