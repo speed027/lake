@@ -1,29 +1,53 @@
-const ideas=[
- {id:1,cat:'AI',budget:'100만원 이하',tag:'AI · 업무자동화',title:'소상공인 맞춤형 AI 업무비서',desc:'예약, 문의 응대, 리뷰 관리를 한 번에 처리하는 업종별 자동화 서비스',score:94,cost:'50만원~',target:'직원 5인 이하 미용실·식당·스튜디오',first:'한 업종을 골라 사장님 5명을 인터뷰하고, 가장 반복적인 업무 하나를 노코드로 자동화해 보세요.'},
- {id:2,cat:'로컬',budget:'100만원 이하',tag:'LOCAL · CONTENT',title:'동네 사장님 숏폼 콘텐츠 스튜디오',desc:'촬영부터 편집, 업로드까지 방문형 월 구독으로 제공하는 콘텐츠 대행',score:89,cost:'80만원~',target:'온라인 홍보가 막막한 지역 자영업자',first:'반경 2km 안의 매장 3곳에 무료 샘플 영상 1개를 제안해 전환율을 확인하세요.'},
- {id:3,cat:'웰니스',budget:'500만원 이하',tag:'WELLNESS · PET',title:'반려동물 맞춤 건강 루틴 구독',desc:'연령과 생활 습관에 맞춘 영양·활동 미션을 매달 배송하는 케어 서비스',score:92,cost:'300만원~',target:'반려동물 건강 관리에 적극적인 2030 양육자',first:'수의사 자문을 받아 3가지 유형의 2주 루틴 PDF를 만들고 사전 신청을 받으세요.'},
- {id:4,cat:'교육',budget:'100만원 이하',tag:'EDU · SENIOR',title:'시니어를 위한 1:1 디지털 생활 코치',desc:'키오스크부터 모바일 뱅킹까지 일상 기술을 집으로 찾아가 알려주는 서비스',score:87,cost:'30만원~',target:'부모님의 디지털 적응을 돕고 싶은 4050 자녀',first:'지역 커뮤니티에 60분 체험 수업을 열고 가장 어려워하는 과제를 기록하세요.'},
- {id:5,cat:'친환경',budget:'1,000만원 이하',tag:'GREEN · B2B',title:'소형 매장 다회용기 순환 서비스',desc:'세척 부담 없이 회수와 재공급을 제공하는 동네 단위 다회용기 네트워크',score:84,cost:'700만원~',target:'포장 주문이 많은 카페와 샐러드 매장',first:'인접 매장 5곳과 회수 거점 1곳을 묶은 4주 파일럿의 손익을 계산하세요.'},
- {id:6,cat:'크리에이터',budget:'500만원 이하',tag:'CREATOR · COMMUNITY',title:'전문가의 지식을 파는 마이크로 클래스',desc:'현업 전문가의 실전 노하우를 90분 라이브 워크숍으로 상품화하는 플랫폼',score:86,cost:'150만원~',target:'작지만 명확한 문제를 해결하려는 직장인',first:'전문가 3명의 강의 주제를 랜딩페이지에 올리고 결제 의향을 먼저 측정하세요.'},
- {id:7,cat:'AI',budget:'500만원 이하',tag:'AI · COMMERCE',title:'온라인 셀러용 상세페이지 진단기',desc:'상품 URL만 넣으면 전환을 막는 카피와 구성을 찾아주는 AI 리포트',score:91,cost:'200만원~',target:'월 매출 3천만원 이하 스마트스토어 판매자',first:'상세페이지 20개를 수동 진단한 뒤 반복되는 개선 항목을 템플릿화하세요.'},
- {id:8,cat:'로컬',budget:'1,000만원 이하',tag:'LOCAL · EXPERIENCE',title:'빈 상가를 활용한 주말 취향 클럽',desc:'공실 공간과 지역 호스트를 연결해 소규모 체험을 여는 팝업 커뮤니티',score:81,cost:'600만원~',target:'새로운 취미와 관계를 찾는 2030 직장인',first:'공간 한 곳과 호스트 두 명을 섭외해 유료 주말 프로그램을 한 차례 열어보세요.'},
- {id:9,cat:'웰니스',budget:'100만원 이하',tag:'WELLNESS · TEAM',title:'10분 팀 리커버리 프로그램',desc:'점심시간 짧은 움직임과 마음 회복 루틴을 제공하는 기업용 웰니스 구독',score:85,cost:'40만원~',target:'번아웃과 팀 활력 저하를 고민하는 스타트업',first:'10명 규모 팀에서 2주간 무료 진행하고 참여율과 컨디션 변화를 기록하세요.'}
+const lessons = [
+  {id:1,cat:'AI 기초',title:'AI는 무엇을 하는 걸까요?',desc:'인공지능을 어렵지 않은 말로 이해하고, 주변에서 만나는 AI를 찾아봐요.',time:'5분',icon:'✳',color:'mint',level:'첫걸음',body:'AI(인공지능)는 사람의 학습·판단과 비슷한 일을 컴퓨터가 하도록 만든 기술을 넓게 부르는 말이에요. 사진 속 사물을 알아보거나, 문장을 번역하거나, 질문에 답하는 일이 대표적이에요. AI라고 해서 사람처럼 모든 것을 이해하는 건 아니고, 학습한 데이터와 맡은 작업에 따라 잘하는 일이 달라요.',quiz:'스마트폰 사진 앱이 얼굴을 찾아 앨범을 정리해요. AI의 활용 사례일까요?',answer:'네. 사진 속 특징을 찾아 사람의 얼굴을 구분하는 인공지능 기능이에요.'},
+  {id:2,cat:'AI 기초',title:'생성형 AI는 어떻게 답할까요?',desc:'글, 그림, 음악을 새로 만들어내는 생성형 AI의 기본 원리를 알아봐요.',time:'6분',icon:'✧',color:'peach',level:'첫걸음',body:'생성형 AI는 많은 예시에서 패턴을 배운 뒤, 입력된 요청에 어울리는 결과를 만들어내요. 언어 모델은 앞에 나온 문맥을 바탕으로 다음에 올 말의 확률을 계산해 문장을 이어갑니다. 그래서 답변이 자연스러워도 사실 확인이 필요한 경우가 있어요.',quiz:'생성형 AI의 문장이 자연스러우면 내용도 언제나 정확할까요?',answer:'아니요. 자연스러운 문장과 사실의 정확성은 달라요. 날짜, 숫자, 중요한 정보는 따로 확인하세요.'},
+  {id:3,cat:'AI 기초',title:'AI가 잘하는 일, 어려워하는 일',desc:'AI에게 맡기면 좋은 일과 직접 확인해야 할 일을 나눠봐요.',time:'5분',icon:'◒',color:'lilac',level:'첫걸음',body:'AI는 초안 만들기, 긴 글 요약, 다양한 아이디어 제안처럼 반복적이고 패턴이 있는 일을 빠르게 도와줄 수 있어요. 하지만 최신 정보, 개인의 맥락, 중요한 판단은 틀리거나 놓칠 수 있습니다. 결과를 그대로 쓰기보다 사람이 목적에 맞게 살펴보고 고치는 과정이 필요해요.',quiz:'AI가 만든 중요한 계약 조항을 검토 없이 그대로 사용해도 될까요?',answer:'아니요. 중요한 결정과 전문 영역에서는 정확한 자료와 자격을 갖춘 전문가를 통해 확인해야 해요.'},
+  {id:4,cat:'프롬프트',title:'원하는 답에 가까운 질문 만들기',desc:'막연한 부탁에 목적과 조건을 더해 결과를 개선하는 법을 배워요.',time:'5분',icon:'✎',color:'peach',level:'초급',body:'프롬프트는 AI에게 입력하는 요청이나 지시예요. “글 써줘” 대신 “초등학생 학부모에게 보낼 소풍 안내문을, 친근한 말투로 5문장 이내에 써줘”라고 하면 목적, 대상, 말투, 길이가 분명해져요. 한 번에 완벽하게 쓰기보다 결과를 보고 추가로 요청해도 괜찮아요.',quiz:'좋은 질문에 추가하면 도움이 되는 정보 한 가지를 골라보세요.',answer:'누가 읽을지, 무엇을 원하는지, 어떤 형식이나 길이를 원하는지 알려주면 도움이 돼요.'},
+  {id:5,cat:'프롬프트',title:'AI에게 역할과 독자를 알려주기',desc:'누구의 관점으로, 누구를 위해 답할지 알려주는 방법을 익혀봐요.',time:'5분',icon:'◎',color:'mint',level:'초급',body:'AI에게 역할과 독자를 알려주면 답의 방향을 구체화할 수 있어요. “여행을 잘 아는 안내자처럼, 걷기가 불편한 부모님을 위해 쉬운 동선을 중심으로 설명해줘”처럼 써볼 수 있습니다. 역할을 지정한다고 해서 실제 전문가의 검토가 대신되는 건 아니에요.',quiz:'“누구에게 보여줄 내용인지”를 알려주면 무엇이 좋아질까요?',answer:'독자에게 알맞은 단어, 설명의 깊이, 말투를 고르는 데 도움이 돼요.'},
+  {id:6,cat:'프롬프트',title:'결과물의 형식까지 부탁하기',desc:'표, 목록, 이메일처럼 원하는 모양을 명확히 전달해 봐요.',time:'4분',icon:'▤',color:'lilac',level:'초급',body:'같은 내용이라도 표, 체크리스트, 짧은 메시지 등 어떤 형태로 받느냐에 따라 쓰기 편리함이 달라져요. “장소·예산·이동시간을 열로 둔 표로 정리해줘”처럼 결과물의 형태와 포함할 항목을 함께 말해보세요. 결과가 길다면 분량 제한도 덧붙일 수 있어요.',quiz:'여러 일정의 시간과 장소를 비교하고 싶을 때 어떤 형식을 요청하면 좋을까요?',answer:'시간과 장소를 열로 둔 표를 요청하면 빠르게 비교할 수 있어요.'},
+  {id:7,cat:'실전 활용',title:'긴 글을 핵심만 요약하기',desc:'요약할 글과 원하는 분량을 정해 읽는 시간을 아껴봐요.',time:'5분',icon:'≋',color:'mint',level:'초급',body:'요약을 부탁할 때는 글의 범위와 요약 목적, 분량을 알려주세요. 예를 들어 “아래 회의 메모에서 결정 사항과 담당자만 뽑아 체크리스트로 정리해줘”라고 할 수 있어요. 원문에 없던 내용이 섞이지 않았는지 결과와 원문을 대조해 보세요.',quiz:'회의 메모에서 담당자와 할 일만 보고 싶다면 무엇을 요청하면 좋을까요?',answer:'결정 사항과 담당자를 분리해 체크리스트로 정리해달라고 요청할 수 있어요.'},
+  {id:8,cat:'실전 활용',title:'글쓰기 첫 초안 빠르게 만들기',desc:'이메일이나 안내문 초안을 만든 다음 내 말투로 다듬어봐요.',time:'5분',icon:'✉',color:'peach',level:'초급',body:'AI에게 글의 목적, 독자, 꼭 들어갈 내용, 원하는 말투를 알려주면 첫 초안을 만들 수 있어요. 초안은 시작점으로 활용하세요. 사실, 날짜, 이름을 확인하고 실제로 내가 전달하고 싶은 뜻이 담겼는지 직접 다듬으면 더 나은 결과가 됩니다.',quiz:'AI가 만든 이메일 초안을 보내기 전에 무엇을 확인해야 할까요?',answer:'받는 사람과 날짜, 사실이 맞는지 확인하고 내 의도에 맞게 말투를 다듬어요.'},
+  {id:9,cat:'실전 활용',title:'아이디어를 여러 방향으로 넓히기',desc:'AI를 브레인스토밍 파트너로 활용하고 내 기준으로 골라봐요.',time:'5분',icon:'✦',color:'lilac',level:'초급',body:'아이디어가 막힐 때 AI에게 여러 방향의 선택지를 요청해보세요. 문제와 대상, 이미 해본 방법, 지켜야 할 조건을 알려주면 더 쓸모 있는 초안을 얻기 쉬워요. 제안은 정답이 아니므로 비용, 시간, 내 상황에 맞춰 직접 비교하고 고르세요.',quiz:'AI가 아이디어 10개를 제안하면 무엇이 다음 단계일까요?',answer:'내 조건과 목표에 맞는 것을 골라 실제 가능성과 필요한 정보를 확인해요.'}
 ];
-const categories=['전체','AI','로컬','웰니스','교육','친환경','크리에이터'];
-const budgets=['전체','100만원 이하','500만원 이하','1,000만원 이하'];
-let category='전체',budget='전체',offset=0;
-let saved=new Set(JSON.parse(localStorage.getItem('idea-spring-saved')||'[]'));
-const grid=document.querySelector('#ideaGrid');
 
-function filterButtons(container,values,type){container.innerHTML=values.map(v=>`<button class="chip ${v==='전체'?'active':''}" data-${type}="${v}">${v}</button>`).join('')}
-filterButtons(document.querySelector('#categoryFilters'),categories,'category');filterButtons(document.querySelector('#budgetFilters'),budgets,'budget');
-function available(){return ideas.filter(i=>(category==='전체'||i.cat===category)&&(budget==='전체'||i.budget===budget))}
-function render(){const all=available();const shown=all.length?Array.from({length:Math.min(6,all.length)},(_,n)=>all[(n+offset)%all.length]):[];grid.innerHTML=shown.length?shown.map(card).join(''):'<p>조건에 맞는 아이디어가 없어요. 필터를 바꿔보세요.</p>';document.querySelector('#resultCount').textContent=`총 ${all.length}개의 가능성 중 ${shown.length}개를 보여드리고 있어요.`;renderSaved()}
-function card(i){return `<article class="card"><div class="card-top"><span class="tag">${i.tag}</span><button class="save-btn ${saved.has(i.id)?'saved':''}" data-save="${i.id}" aria-label="저장">${saved.has(i.id)?'♥':'♡'}</button></div><h3>${i.title}</h3><p>${i.desc}</p><div class="metrics"><div><small>시장 매력도</small><b>${i.score} / 100</b></div><div><small>예상 초기 비용</small><b>${i.cost}</b></div></div><button class="detail-btn" data-detail="${i.id}">아이디어 자세히 보기 →</button></article>`}
-document.addEventListener('click',e=>{const c=e.target.closest('[data-category]'),b=e.target.closest('[data-budget]'),s=e.target.closest('[data-save]'),d=e.target.closest('[data-detail]'),scroll=e.target.closest('[data-scroll]');if(c){category=c.dataset.category;activate(c)}if(b){budget=b.dataset.budget;activate(b)}if(s){toggleSave(+s.dataset.save)}if(d){openDetail(+d.dataset.detail)}if(scroll)document.querySelector('#'+scroll.dataset.scroll).scrollIntoView({behavior:'smooth'})});
-function activate(el){[...el.parentElement.children].forEach(x=>x.classList.remove('active'));el.classList.add('active');offset=0;render()}
-function toggleSave(id){saved.has(id)?saved.delete(id):saved.add(id);localStorage.setItem('idea-spring-saved',JSON.stringify([...saved]));render()}
-function renderSaved(){const el=document.querySelector('#savedList');const list=ideas.filter(i=>saved.has(i.id));el.innerHTML=list.length?list.map(i=>`<div class="saved-row"><b>${i.title}</b><button data-save="${i.id}">삭제</button></div>`).join(''):'<p>아직 저장한 아이디어가 없어요. 하트 버튼으로 담아보세요.</p>'}
-document.querySelector('#refreshBtn').onclick=()=>{offset++;render();grid.animate([{opacity:.2,transform:'translateY(8px)'},{opacity:1,transform:'none'}],{duration:350})};
-const dialog=document.querySelector('#detailDialog');function openDetail(id){const i=ideas.find(x=>x.id===id);document.querySelector('#dialogContent').innerHTML=`<span class="dialog-tag">${i.tag}</span><h2 class="dialog-title">${i.title}</h2><p class="dialog-lead">${i.desc}</p><div class="dialog-box"><h4>누구를 위한 사업인가요?</h4><p>${i.target}</p></div><div class="dialog-box"><h4>이번 주 첫 실행</h4><p>${i.first}</p></div><button class="dialog-action" data-save="${i.id}">${saved.has(i.id)?'저장에서 빼기':'이 아이디어 저장하기'}</button>`;dialog.showModal()}
-document.querySelector('.dialog-close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});render();
+const progressKey='ai-hanip-completed-v1';
+const practiceKey='ai-hanip-practice-v1';
+let completed=new Set(JSON.parse(localStorage.getItem(progressKey)||'[]'));
+let filter='전체';
+const grid=document.querySelector('#lessonGrid');
+const safeText=(value)=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function renderLessons(){
+  const list=lessons.filter(l=>filter==='전체'||l.cat===filter);
+  grid.innerHTML=list.map(l=>`<article class="lesson-card ${completed.has(l.id)?'is-done':''}"><div class="lesson-card-top"><span class="lesson-icon ${l.color}">${l.icon}</span><button class="lesson-check ${completed.has(l.id)?'checked':''}" data-complete="${l.id}" aria-label="${completed.has(l.id)?'완료 취소':'레슨 완료 표시'}">${completed.has(l.id)?'✓':'○'}</button></div><div class="lesson-meta"><span>${l.cat}</span><i>·</i><span>${l.time}</span></div><h3>${l.title}</h3><p>${l.desc}</p><button class="lesson-open" data-lesson="${l.id}">${completed.has(l.id)?'다시 보기':'레슨 보기'} <span>→</span></button></article>`).join('');
+}
+function renderProgress(){
+  const groups=[{ids:[1,2,3],count:'#basicProgress',bar:'#basicBar'},{ids:[4,5,6],count:'#promptProgress',bar:'#promptBar'},{ids:[7,8,9],count:'#useProgress',bar:'#useBar'}];
+  groups.forEach(g=>{const n=g.ids.filter(id=>completed.has(id)).length;document.querySelector(g.count).textContent=`${n} / 3`;document.querySelector(g.bar).style.width=`${n/3*100}%`});
+}
+function markComplete(id){completed.has(id)?completed.delete(id):completed.add(id);localStorage.setItem(progressKey,JSON.stringify([...completed]));renderLessons();renderProgress()}
+
+document.addEventListener('click',e=>{
+  const tab=e.target.closest('[data-filter]'),lesson=e.target.closest('[data-lesson]'),check=e.target.closest('[data-complete]'),scroll=e.target.closest('a[href^="#"]');
+  if(tab){filter=tab.dataset.filter;document.querySelectorAll('.lesson-tab').forEach(x=>x.classList.toggle('active',x===tab));renderLessons()}
+  if(lesson)openLesson(+lesson.dataset.lesson);
+  if(check){e.preventDefault();markComplete(+check.dataset.complete)}
+  if(scroll){document.querySelectorAll('.mobile-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===scroll.getAttribute('href')))}
+});
+
+const dialog=document.querySelector('#lessonDialog');
+function openLesson(id){
+ const l=lessons.find(x=>x.id===id);if(!l)return;
+ document.querySelector('#dialogContent').innerHTML=`<div class="lesson-modal-top"><span class="lesson-icon ${l.color}">${l.icon}</span><span class="dialog-tag">${l.cat} · ${l.time}</span></div><h2 class="dialog-title">${l.title}</h2><p class="dialog-lead">${l.body}</p><div class="dialog-box"><span class="quiz-eyebrow">✳ CHECK YOURSELF</span><h4>${l.quiz}</h4><details><summary>힌트와 답 보기</summary><p>${l.answer}</p></details></div><button class="dialog-action" data-modal-complete="${l.id}">${completed.has(l.id)?'학습 완료했어요 ✓':'이 레슨 완료하기'}</button>`;
+ dialog.showModal();
+}
+document.querySelector('.dialog-close').onclick=()=>dialog.close();
+dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();const done=e.target.closest('[data-modal-complete]');if(done){const id=+done.dataset.modalComplete;if(!completed.has(id))markComplete(id);done.textContent='학습 완료했어요 ✓';done.classList.add('done')}});
+
+const practiceInput=document.querySelector('#practiceInput');
+practiceInput.value=localStorage.getItem(practiceKey)||'';
+function updateCount(){document.querySelector('#charCount').textContent=`${practiceInput.value.length}자 · 답변은 이 기기 안에만 저장돼요`}
+practiceInput.addEventListener('input',updateCount);updateCount();
+document.querySelector('#savePractice').onclick=()=>{localStorage.setItem(practiceKey,practiceInput.value);const status=document.querySelector('#practiceStatus');status.textContent=practiceInput.value.trim()?'연습 내용을 이 기기에 저장했어요. 잘하셨어요!':'먼저 질문을 한 번 적어보세요.';};
+
+renderLessons();renderProgress();
